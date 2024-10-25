@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-tac-toe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body onload="initialize()">
+    <h1>Tic-Tac-Toe</h1>
+    <table id="table_game">
+        <tr>
+            <td class="td_game"><div id="cell0" onclick="cellClicked(this.id)" class="fixed"></div></td>
+            <td class="td_game"><div id="cell1" onclick="cellClicked(this.id)" class="fixed"></div></td>
+            <td class="td_game"><div id="cell2" onclick="cellClicked(this.id)" class="fixed"></div></td>
+        </tr>
+        <tr>
+            <td class="td_game"><div id="cell3" onclick="cellClicked(this.id)" class="fixed"></div></td>
+            <td class="td_game"><div id="cell4" onclick="cellClicked(this.id)" class="fixed"></div></td>
+            <td class="td_game"><div id="cell5" onclick="cellClicked(this.id)" class="fixed"></div></td>
+        </tr>
+        <tr>
+            <td class="td_game"><div id="cell6" onclick="cellClicked(this.id)" class="fixed"></div></td>
+            <td class="td_game"><div id="cell7" onclick="cellClicked(this.id)" class="fixed"></div></td>
+            <td class="td_game"><div id="cell8" onclick="cellClicked(this.id)" class="fixed"></div></td>
+        </tr>
+    </table>
+
+    <h1 id="playerNameDisplay" title="Jugador"><span id="playerName"></span></h1>
+
+    <table id="Resultados">
+        <hr>
+        <tr>
+            <th class="th_list">Jugador</th>
+            <th class="th_list">Derrotas</th>
+            <th class="th_list" style="padding-right:10px;padding-left:10px">Empates</th>
+            <th class="th_list">Victorias</th>
+            <th class="th_list">Tiempo</th>
+            <th class="th_list">Fecha</th>
+        </tr>
+        <tr>
+            <td class="td_list" id="player"></td>
+            <td class="td_list" id="computer_score"></td>
+            <td class="td_list" style="padding-right:10px;padding-left:10px" id="tie_score"></td>
+            <td class="td_list" id="player_score"></td>
+            <td class="td_list" id="tiempo"></td>
+            <td class="td_list" id="Date_time"></td>
+        </tr>
+    </table>
+    <div id="winAnnounce" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('winAnnounce')">×</span>
+            <p id="winText"></p>
+        </div>
+    </div>
+
+    <button onclick="resetData()" class="button" id="new-game" title="Reiniciar puntajes">Iniciar juego nuevo</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
